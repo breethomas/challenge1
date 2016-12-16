@@ -56,8 +56,9 @@ body {
   height: 75px;
   margin: 50px auto;
   display: block;
-
 }
+
+
 
 .title {
   padding: 5px;
@@ -119,11 +120,13 @@ body {
 
 @media screen and (min-width: 600px) {
   .box {
+    flex-wrap: wrap;
+    justify-content: center;
     width: 33%;
   }
 
   .title {
-    width: 66%;
+    width: 64%;
   }
 }
 
@@ -146,10 +149,11 @@ body {
 
   .box {
     width: 33%;
+    height: 33%;
   }
 
   .title {
-    width: 66%;
+    width: 64%;
   }
 
   .left-arrow {
