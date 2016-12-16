@@ -3,7 +3,7 @@
 /*other*/
 body {
   display: flex;
-  /*border: 10px solid gray;*/
+  border: 10px solid gray;
   font-family: 'Oswald', sans-serif;
   flex-wrap: wrap;
 }
@@ -56,10 +56,6 @@ body {
   height: 75px;
   margin: 50px auto;
   display: block;
-
-}
-
-.box p {
 
 }
 
@@ -154,5 +150,15 @@ body {
 
   .title {
     width: 66%;
+  }
+
+  .left-arrow {
+    bottom: 300px;
+    left: 10px;
+  }
+
+  .right-arrow {
+    bottom: 300px;
+    right: 10px;
   }
 }
