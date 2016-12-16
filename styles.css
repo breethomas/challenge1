@@ -1,0 +1,108 @@
+/*positioning*/
+/*display & box model*/
+/*other*/
+body {
+  display: flex;
+  flex-direction: column-reverse;
+  border: 10px solid gray;
+  font-family: 'Oswald', sans-serif;
+}
+
+.pictures {
+  width: 100%;
+  height: 500px;
+  background-image: url('images/tycho-hero-image.jpeg');
+  background-color:
+}
+
+.box {
+  display: inline-block;
+  margin-right: -4px;
+  width: 50%;
+  height: 200px;
+}
+.title {
+  padding: 5px;
+  width: 100%;
+  font-size: 15px;
+  background-color: blue;
+}
+
+.title p{
+  margin: 5px 5px;
+}
+
+.tycho-title{
+  font-size: 30px;
+  font-weight: 700;
+
+}
+
+
+.title button {
+  background:none;
+  border:2px solid white;
+  margin: 10px 10px;
+  padding: 10px 30px;
+}
+
+.resume {
+  right: 0px;
+}
+.contact {
+
+}
+
+
+section {
+
+}
+@media screen and (min-width: 600px) {
+  .box {
+    display: inline-block;
+    margin-right: -4px;
+    width: 33%;
+    height: 33%;
+    height: 200px;
+  }
+
+  .title {
+    width: 66%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+
+  body {
+    flex-direction: row;
+    overflow-y: hidden;
+  }
+
+  section {
+    display: inline-block;
+    flex-wrap: wrap;
+    height: 100vh;
+  }
+
+  .nav {
+    background-color: grey;
+    width: 60%;
+    margin: none;
+  }
+
+  .box {
+    display: inline-block;
+    margin-right: -4px;
+    width: 33%;
+    height: 33%;
+  }
+
+  .title {
+    width: 66%;
+  }
+
+  .pictures {
+    width: 40%;
+    height: 100vh;
+    flex-wrap: wrap;
+  }
