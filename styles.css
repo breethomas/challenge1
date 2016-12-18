@@ -1,58 +1,71 @@
-/*positioning*/
-/*display & box model*/
-/*other*/
+/* base */
+html, body {
+  height: 100%;
+}
+
 body {
   display: flex;
+  flex-direction: column;
   border: 10px solid gray;
   font-family: 'Oswald', sans-serif;
-  flex-wrap: wrap;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+/* typography */
+h2 {
+  line-height: 2;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.2;
 }
 
 .pictures {
-  width: 100%;
-  height: 500px;
-  background-image: url('images/tycho-hero-image.jpeg');
-  background-position: center;
-  background-size: cover;;
   position: relative;;
+  flex-basis: 30%;
+  background: url('images/tycho-hero-image.jpeg') no-repeat center;
+  background-size: cover;;
 }
 
 .pictures img {
   width: 50px;
 }
 
-.left-arrow {
-  position:absolute;
-  bottom: 225px;
+.arrow {
+  position: absolute;
+  bottom: 50%;
+}
+
+.arrow.left {
   left: 10px;
 }
 
-.right-arrow {
-  position:absolute;
-  bottom: 225px;
+.right.arrow {
   right: 10px;
 }
 
-.img-progression{
+.img-progression {
   position: absolute;
   right: 30px;
   top: 20px;
-
 }
 
 .nav {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  height: 100%;
 }
 
 .box {
   display: flex;
-  width: 50%;
-  min-height: 200px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 20px 0;
+  flex: 1 1 50%;
 }
 
 .box img {
@@ -61,35 +74,25 @@ body {
   display: block;
 }
 
-.title {
-  display: flex;
-  width: 100%;
-  min-height: 200px;
-  font-size: 15px;
+.title-box {
+  flex-grow: 3;
+  padding: 20px;
   background-color: #F71735;
-  flex-direction: column;
-}
-
-.title p{
-  padding: 10px 0 10px 20px;
-}
-
-.tycho-title{
-  padding: 30px 0 5px 20px;
-  font-size: 30px;
-  font-weight: 700;
-
 }
 
 .button-container {
-  padding: 20px 0 5px 20px;
+  margin-top: 20px;
 }
 
-.title button {
-  background:none;
-  border:2px solid white;
+.button-container button {
+  background: none;
+  border: 2px solid white;
   padding: 10px 30px;
   color: #ffffff;
+}
+
+.button-container button:first-child {
+  margin-right: 15px;
 }
 
 .store {
@@ -123,40 +126,21 @@ body {
 }
 
 
-
-@media screen and (min-width: 600px) {
-  .box {
-    width: 33.3333%;
-  }
-
-  .title {
-    width: 66.6666%;
-  }
-}
-
-@media screen and (min-width: 800px) {
-
+@media screen and (min-width: 900px) {
   body {
     flex-direction: row-reverse;
   }
-
   .pictures {
-    width: 40%;
-    height: 100vh;
+    flex-basis: 100%
   }
+}
 
-  .nav {
-    width: 60%;
-    height: 100vh;
+
+@media screen and (min-width: 1300px) {
+  .title-box {
+    flex-basis: 60%;
   }
-
-  .left-arrow {
-    bottom: 330px;
-    left: 10px;
-  }
-
-  .right-arrow {
-    bottom: 330px;
-    right: 10px;
+  .box {
+    flex-basis: 33.3333%;
   }
 }
